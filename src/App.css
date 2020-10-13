@@ -36,3 +36,58 @@
     transform: rotate(360deg);
   }
 }
+
+.list-item {
+  display: flex;
+  align-items: center;
+}
+
+.list-item .list-item-check {
+  margin-right: 0.5rem;
+}
+
+.list-item .list-item-label {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 4px 8px;
+  margin-right: 0.5rem;
+}
+
+.list-item button {
+  border: 0;
+  padding: 4px 8px;
+  background: #666;
+  border-radius: 8px;
+  color: #fff;
+  margin-right: 0.5rem;
+}
+
+.list-item span {
+  font-size: 12px;
+  color: #666;
+}
+
+.list-items {
+  background: #edf7fa;
+  padding: 2rem;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.list-items .list-item {
+  margin-top: 1rem;
+}
+
+.list-items .list-item:first-child {
+  margin-top: 0;
+}
+
+.list-items.loading {
+  text-align: center;
+}
+
+.list-items.empty {
+  text-align: center;
+  color: blue;
+  font-size: 1.2rem;
+}
