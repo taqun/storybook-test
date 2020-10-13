@@ -1,4 +1,5 @@
 import React from "react";
+import { Story } from "@storybook/react/";
 import Task, { TaskProps } from "./Task";
 
 export default {
@@ -6,7 +7,7 @@ export default {
   title: "Task",
 };
 
-const Template = (args: TaskProps) => <Task {...args} />;
+const Template: Story<TaskProps> = (args) => <Task {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
@@ -20,7 +21,7 @@ Default.args = {
 export const Pinned = Template.bind({});
 Pinned.args = {
   task: {
-    ...Default.args.task,
+    ...Default.args.task!,
     state: "TASK_PINNED",
   },
 };
@@ -28,7 +29,7 @@ Pinned.args = {
 export const Archived = Template.bind({});
 Archived.args = {
   task: {
-    ...Default.args.task,
+    ...Default.args.task!,
     state: "TASK_ARCHIVED",
   },
 };

@@ -1,12 +1,13 @@
 import React from "react";
-import TaskList from "./TaskList";
+import { Story } from "@storybook/react/";
+import TaskList, { TaskListProps } from "./TaskList";
 
 export default {
   component: TaskList,
   title: "TaskList",
 };
 
-const Template = (args) => <TaskList {...args} />;
+const Template: Story<TaskListProps> = (args) => <TaskList {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {

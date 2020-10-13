@@ -12,7 +12,7 @@ const TaskList = (props: TaskListProps) => {
     return <div className="list-items loading">Loading...</div>;
   }
 
-  if (props.tasks.length == 0) {
+  if (props.tasks.length === 0) {
     return <div className="list-items empty">You have no tasks!</div>;
   }
 
